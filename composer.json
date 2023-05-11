@@ -7,7 +7,7 @@
 		"name": "Till Wehowski",
 		"email": "software@frdl.de"
 	}],
-
+        "type": "webfan-app",
 	"scripts": {
 		"UNCOMMENT_IF_pre-install-cmd": [
 			"-d memory_limit=-1 composer self-update --2"
@@ -26,7 +26,6 @@
 		]
 	},
 	"extra": {
-
 		"compile-mode": "all",
 		"foxy": true,
 		"installer-types": [
@@ -35,13 +34,16 @@
 			"frdl-module",
 			"frdl-httpdocs",
 			"frdl-public",
+			"webfan-app",			
+			"webfan-connection",
+			"webfan-config",
 			"webfan-package",
 			"webfan-extension",
 			"webfan-theme",
 			"webfan-module",
 			"webfan-httpdocs",
 			"webfan-public",
-			"vendor",
+			"vendor-package",
 			"npm-package",
 			"node-module",
 			"project",
@@ -51,6 +53,15 @@
 			"packages\/{$vendor}\/{$name}\/": [
 				"type:automad-package"
 			],
+			"modules\/frdlweb\/{$vendor}\/{$name}\/": [
+				"vendor:frdl",
+				"vendor:frdlweb",
+				"vendor:webfan",
+				"vendor:webfan3"
+			],	
+			"modules\/composer\/{$vendor}\/{$name}\/": [
+				"type:vendor-package"
+			],			
 			"modules\/frdl\/{$vendor}.{$name}\/": [
 				"type:frdl-module"
 			],
@@ -79,6 +90,9 @@
 			"~/.webfan/shared\/{$name}\/{$vendor}\/": [
 				"type:frdl-shared"
 			],
+			"~/.frdl/apps\/{$name}\/{$vendor}.{$name}\/": [
+				"type:webfan-app"
+			],
 			"userland\/": [
 				"type:webfan-userland"
 			],
@@ -88,12 +102,7 @@
 			"public\/": [
 				"type:frdl-httpdocs"
 			],
-			"vendor\/frdlweb\/{$vendor}\/{$name}\/": [
-				"vendor:frdl",
-				"vendor:frdlweb",
-				"vendor:webfan",
-				"vendor:webfan3"
-			],
+
 			"./": [
 				"type:frdl-patch"
 			],
@@ -121,11 +130,13 @@
 			],
 			"exclude": [],
 			"types": [
+				"frdl-connection",
 				"frdl-extension",
 				"frdl-theme",
 				"frdl-module",
 				"frdl-shared",
 				"frdl-public",
+			        "webfan-app",
 				"webfan-extension",
 				"webfan-theme",
 				"webfan-module",
@@ -136,6 +147,7 @@
 				"webfan-webfiles",
 				"webfan-userland",
 				"frdl-patch",
+			         "vendor",
 				"automad-package"
 			]
 		},
@@ -215,83 +227,10 @@
 		"composer/composer": "*",
 		"friendsofphp/proxy-manager-lts": "*",
 		"yosymfony/resource-watcher": "*",
-		"sensiolabs/ansi-to-html": "*",
-
-		"frdl/php-floodprotection": "*",
-		"frdl/remote-psr4": "*",
-		"frdl/event-module": "*",
-		"webfan3/php-easy-breaker": ">=0.3.6",
+		
 		"comcast/php-legal-licenses": "*",
-		"ninsuo/php-shared-memory": "*",
-		"nette/utils": "*",
-		"nette/caching": "*",
-		"nette/robot-loader": "*",
-		"nette/reflection": "*",
-		"nette/php-generator": ">=4.0.6",
-		"spatie/temporary-directory": "*",
-		"nikic/php-parser": "*",
-		"hellogerard/jobby": "*",
 
-		"caseyamcl/configula": "*",
-		"karelwintersky/monolog-pdo-handler": "*",
-		"catfan/medoo": "*",
-		"byjg/migration": "*",
-		"bramus/router": "*",
-		"adhocore/cli": "*",
-		"rosell-dk/locate-binaries": "*",
-		"rosell-dk/htaccess-capability-tester": "*",
-		"rosell-dk/exec-with-fallback": "*",
-
-		"symfony/finder": "*",
-		"psr/http-message": "*",
-
-		"laminas/laminas-httphandlerrunner": ">=2.5.0",
-
-		"roave/security-advisories": "dev-master",
-		"frdl/auth": ">=0.0.3",
-		"frdl/cms": ">=0.0.2",
-		"rosell-dk/image-mime-type-guesser": "^0.3",
-		"league/commonmark": "*",
-		"mustangostang/spyc": "^0.6",
-		"minicli/minicli": "*",
-		"league/flysystem-sftp": "*",
-		"league/flysystem-webdav": "*",
-		"league/flysystem-ziparchive": "*",
-		"slim/slim": "*",
-		"vlucas/phpdotenv": "*",
-		"php-vfs/php-vfs": "*",
-		"brzuchal/filesystem-stream-wrapper": "*",
-		"ivopetkov/html5-dom-document-php": "*",
-		"ivopetkov/html-server-components-compiler": ">=1.1.0",
-		"fusio/sdk": "*",
-		"altorouter/altorouter": "*",
-		"league/html-to-markdown": "*",
-		"league/pipeline": "*",
-		"commonjs/commonjs": "*",
-		"robthree/twofactorauth": "*",
-		"guzzlehttp/psr7": "*",
-		"phpactor/path-finder": "*",
-		"uma/json-rpc": "*",
-		"phpseclib/phpseclib": "*",
-		"m2mtech/flysystem-stream-wrapper": "*",
-		"php-di/invoker": "*",
-		"mirazmac/php-requirements-checker": "*",
-		"mirazmac/dotenvwriter": "*",
-		"league/route": ">=5.1.2",
-		"wmde/php-vuejs-templating": "*",
-		"php-di/php-di": "6.4.0",
-		"ocramius/proxy-manager": "*",
-		"spatie/once": "*",
-		"roave/better-reflection": "*",
-		"appstract/php-hostsfile": "*",
-		"joomla/keychain": "~2.0",
-		"landrok/activitypub": "*",
-		"delirehberi/webfinger": "*",
-		"relay/relay": "~2.0",
-		"workerman/phpsocket.io": "*",
-		"teqneers/shamir": "*",
-		"blake-gardner/mac-address": "*",
-		"ggergo/enum": "*"
+		"frdl/codebase-vendors" : "*"
 	},
 
 	"autoload": {
