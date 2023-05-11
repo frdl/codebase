@@ -33,16 +33,22 @@
 			"frdl-theme",
 			"frdl-module",
 			"frdl-httpdocs",
-			"frdl-public",
+			"frdl-public",			
+			
 			"webfan-app",			
 			"webfan-connection",
 			"webfan-config",
-			"webfan-package",
+			"webfan-endpoint",
 			"webfan-extension",
+			"webfan-generator",
+			"webfan-package",
 			"webfan-theme",
 			"webfan-module",
 			"webfan-httpdocs",
 			"webfan-public",
+			"webfan-server",
+			"webfan-service",
+		
 			"vendor-package",
 			"npm-package",
 			"node-module",
@@ -219,7 +225,7 @@
 		}
 	},
 	"require-dev": {
-
+           "frdl/codebase-vendors" : "*"
 	},
 	"require": {
 		"php": ">=8.0",
@@ -228,9 +234,7 @@
 		"friendsofphp/proxy-manager-lts": "*",
 		"yosymfony/resource-watcher": "*",
 		
-		"comcast/php-legal-licenses": "*",
-
-		"frdl/codebase-vendors" : "*"
+		"comcast/php-legal-licenses": "*"		
 	},
 
 	"autoload": {
