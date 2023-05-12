@@ -7,7 +7,7 @@
 		"name": "Till Wehowski",
 		"email": "software@frdl.de"
 	}],
-        "type": "webfan-app",
+        "type": "webfan-any",
 	"scripts": {
 		"UNCOMMENT_IF_pre-install-cmd": [
 			"-d memory_limit=-1 composer self-update --2"
@@ -35,19 +35,32 @@
 			"frdl-httpdocs",
 			"frdl-public",			
 			
-			"webfan-app",			
+			
+			"webfan-webfat",
+			
+			"webfan-any",
+			"webfan-app",
+			"webfan-adapter",
+			"webfan-aggregator",
+			"webfan-bundle",			
 			"webfan-connection",
 			"webfan-config",
+			"webfan-data",
 			"webfan-endpoint",
 			"webfan-extension",
-			"webfan-generator",
-			"webfan-package",
+			"webfan-project",
+			"webfan-hybrid",
+			"webfan-package", 
 			"webfan-theme",
 			"webfan-module",
+			"webfan-plugin",
 			"webfan-httpdocs",
 			"webfan-public",
+			"webfan-vendor",
+			"webfan-widget",
 			"webfan-server",
 			"webfan-service",
+			"webfan-static",
 		
 			"vendor-package",
 			"npm-package",
@@ -56,37 +69,7 @@
 			"automad-package"
 		],
 		"installer-paths": {
-			"packages\/{$vendor}\/{$name}\/": [
-				"type:automad-package"
-			],
-			"modules\/frdlweb\/{$vendor}\/{$name}\/": [
-				"vendor:frdl",
-				"vendor:frdlweb",
-				"vendor:webfan",
-				"vendor:webfan3"
-			],	
-			"modules\/composer\/{$vendor}\/{$name}\/": [
-				"type:vendor-package"
-			],			
-			"modules\/frdl\/{$vendor}.{$name}\/": [
-				"type:frdl-module"
-			],
-			"modules\/webfan\/{$vendor}\/{$name}\/": [
-				"type:frdl-module"
-			],
-			"modules\/packages\/{$vendor}\/{$name}\/": [
-				"type:frdl-package"
-			],
-
-			"modules\/extensions\/{$name}\/{$vendor}~{$name}\/": [
-				"type:frdl-extension"
-			],
-			"modules\/themes\/{$name}\/{$vendor}~{$name}\/": [
-				"type:frdl-theme"
-			],
-			"webfantized\/{$name}\/{$vendor}\/": [
-				"type:webfan-feature"
-			],
+			 
 			"config\/{$name}\/{$vendor}\/": [
 				"type:frdl-config"
 			],
@@ -120,6 +103,36 @@
 			],
 			"..\/{$vendor}~{$name}~project\/": [
 				"type:project"
+			],	
+			
+			"packages\/{$vendor}\/{$name}\/": [
+				"type:automad-package"
+			],
+			"modules\/composer\/{$vendor}\/{$name}\/": [
+				"type:vendor-package"
+			], 
+			"modules\/packages\/{$vendor}\/{$name}\/": [
+				"type:frdl-module",
+				"type:frdl-package"
+			],
+
+			"modules\/adapters\/{$name}\/{$vendor}~{$name}\/": [
+				"type:frdl-adapter"
+			],
+			"modules\/connections\/{$name}\/{$vendor}~{$name}\/": [
+				"type:frdl-connection"
+			],
+			"modules\/extensions\/{$name}\/{$vendor}~{$name}\/": [
+				"type:frdl-extension"
+			],
+			"modules\/themes\/{$name}\/{$vendor}~{$name}\/": [
+				"type:frdl-theme"
+			],
+			"core\/libs\/{$vendor}\/{$name}\/": [
+				"vendor:frdl",
+				"vendor:frdlweb",
+				"vendor:webfan",
+				"vendor:webfan3"
 			]
 		},
 		"dependency-scripts": {
@@ -247,6 +260,7 @@
 	"suggest": {
 		"frdl/project": "Frdlweb project template",
 		"webfan3/website": "Default Start/Installer Template",
-		"frdlweb/webfat": "...if you want to build websites or load the webfat stub helper classes... (this could produce issues on codebase server!)"
+		"frdlweb/webfat": "...if you want to build websites or load the webfat stub helper classes... (this could produce issues on codebase server!)",
+		"frdl/codebase-vendors" : "misc best of practises"
 	}
 }
