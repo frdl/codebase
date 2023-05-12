@@ -7,7 +7,7 @@
 		"name": "Till Wehowski",
 		"email": "software@frdl.de"
 	}],
-        "type": "webfan-any",
+        "type": "project",
 	"scripts": {
 		"UNCOMMENT_IF_pre-install-cmd": [
 			"-d memory_limit=-1 composer self-update --2"
