@@ -139,6 +139,7 @@
 			"run": true,
 			"trust": [
 				"airmad\/*",
+				"composer\/*",
 				"symfony",
 				"symfony\/symfony",
 				"symfony\/console",
