@@ -212,6 +212,11 @@
 				"url": "https://github.com/jenssegers/php-proxy/archive/refs/tags/v3.1.0.zip",
 				"path": "./../../../vendor/jenssegers/proxy",
 				"ignore": [".*"]
+			},
+			"vendor-patch/enum-cl": {
+				"url": "https://github.com/vendor-patch/enum-cl/archive/refs/heads/master.zip",
+				"path": "./../../../vendor/vendor-patch/enum-cl",
+				"ignore": [".*"]
 			}
 		}
 	},
