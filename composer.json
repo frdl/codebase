@@ -7,7 +7,6 @@
 		"name": "Till Wehowski",
 		"email": "software@frdl.de"
 	}],
-        "type": "project",
 	"scripts": {
 		"UNCOMMENT_IF_pre-install-cmd": [
 			"-d memory_limit=-1 composer self-update --2"
@@ -214,7 +213,7 @@
 				"ignore": [".*"]
 			},
 			"vendor-patch/enum-cl": {
-				"url": "https://github.com/vendor-patch/enum-cl/archive/refs/heads/master.zip",
+				"url": "https://github.com/vendor-patch/php-enum-cl/archive/refs/heads/main.zip",
 				"path": "./../../../vendor/vendor-patch/enum-cl",
 				"ignore": [".*"]
 			}
@@ -252,7 +251,7 @@
 		"composer/composer": "*",
 		"friendsofphp/proxy-manager-lts": "*",
 		"yosymfony/resource-watcher": "*",
-		
+		"statical/statical" : "*",
 		"comcast/php-legal-licenses": "*"		
 	},
 
