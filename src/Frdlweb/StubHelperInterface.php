@@ -1,6 +1,6 @@
 <?php 
 
-namespace frdlweb;
+namespace Frdlweb;
 
  interface StubHelperInterface
  { 
