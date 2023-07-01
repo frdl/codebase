@@ -2,7 +2,7 @@
 
 namespace Frdlweb\Contract\Autoload;
  	
-interface CodebaseInterface
+  interface CodebaseInterface
  { 
    const ALL_CHANNELS = '*';
    const ENDPOINT_DEFAULT = 'RemoteApiBaseUrl';
