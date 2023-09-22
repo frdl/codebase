@@ -243,6 +243,7 @@
 		}
 	},
 	"require-dev": {
+	   "roave/security-advisories": "dev-latest",	
            "frdl/codebase-vendors" : "*"
 	},
 	"require": {
@@ -254,7 +255,6 @@
 		"statical/statical" : "*",
 		"comcast/php-legal-licenses": "*"		
 	},
-
 	"autoload": {
 		"classmap": ["src/"],
 		"psr-4": {
