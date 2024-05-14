@@ -65,6 +65,7 @@
 			"npm-package",
 			"node-module",
 			"project",
+			"library",
 			"automad-package"
 		],
 		"config-plugin-output-dir": "config",
