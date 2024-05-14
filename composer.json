@@ -87,7 +87,7 @@
 			},
 			"vendor-patch/psecio.secure_dotenv": {
 				"url": "https://github.com/vendor-patch/secure_dotenv/archive/refs/heads/master.zip",
-				"path": vendor/vendor-patch/psecio.secure_dotenv",
+				"path": "vendor/vendor-patch/psecio.secure_dotenv",
 				"ignore": [".*"]
 			},
 			"inverisoss/tiny-php-queue": {
