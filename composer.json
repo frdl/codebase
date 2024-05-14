@@ -67,154 +67,46 @@
 			"project",
 			"automad-package"
 		],
-		"installer-paths": {
-			 
-			"config\/{$name}\/{$vendor}\/": [
-				"type:frdl-config"
-			],
-			"modules\/service\/{$name}\/{$vendor}\/": [
-				"type:frdl-service"
-			],
-			"~/.webfan/shared\/{$name}\/{$vendor}\/": [
-				"type:frdl-shared"
-			],
-			"~/.frdl/apps\/{$name}\/{$vendor}.{$name}\/": [
-				"type:webfan-app"
-			],
-			"userland\/": [
-				"type:webfan-userland"
-			],
-			"{$webroot}\/": [
-				"type:webfan-webfiles"
-			],
-			"public\/": [
-				"type:frdl-httpdocs"
-			],
-
-			"./": [
-				"type:frdl-patch"
-			],
-			"{$workspace}\/node_modules\/{$vendor}\/{$name}\/": [
-				"type:node-module"
-			],
-			"node_modules\/{$vendor}.{$name}\/": [
-				"type:npm-package"
-			],
-			"..\/{$vendor}~{$name}~project\/": [
-				"type:project"
-			],	
-			
-			"packages\/{$vendor}\/{$name}\/": [
-				"type:automad-package"
-			],
-			"modules\/composer\/{$vendor}\/{$name}\/": [
-				"type:vendor-package"
-			], 
-			"modules\/packages\/{$vendor}\/{$name}\/": [
-				"type:frdl-module",
-				"type:frdl-package"
-			],
-
-			"modules\/adapters\/{$name}\/{$vendor}~{$name}\/": [
-				"type:frdl-adapter"
-			],
-			"modules\/connections\/{$name}\/{$vendor}~{$name}\/": [
-				"type:frdl-connection"
-			],
-			"modules\/extensions\/{$name}\/{$vendor}~{$name}\/": [
-				"type:frdl-extension"
-			],
-			"modules\/themes\/{$name}\/{$vendor}~{$name}\/": [
-				"type:frdl-theme"
-			],
-			"core\/libs\/{$vendor}\/{$name}\/": [
-				"vendor:frdl",
-				"vendor:frdlweb",
-				"vendor:webfan",
-				"vendor:webfan3"
-			]
-		},
-		"dependency-scripts": {
-			"run": true,
-			"trust": [
-				"airmad\/*",
-				"composer\/*",
-				"symfony",
-				"symfony\/symfony",
-				"symfony\/console",
-				"frdl\/console",
-				"frdl\/*",
-				"webfan3\/*",
-				"wehowski\/*"
-			],
-			"exclude": [],
-			"types": [
-				"frdl-connection",
-				"frdl-extension",
-				"frdl-theme",
-				"frdl-module",
-				"frdl-shared",
-				"frdl-public",
-			        "webfan-app",
-				"webfan-extension",
-				"webfan-theme",
-				"webfan-module",
-				"webfan-package",
-				"frdl-service",
-				"frdl-config",
-				"webfan-feature",
-				"webfan-webfiles",
-				"webfan-userland",
-				"frdl-patch",
-			         "vendor",
-				"automad-package"
-			]
-		},
 		"config-plugin-output-dir": "config",
-
-		"webfan": {
-			"install": {
-
-			}
-		},
+ 
 		"downloads": {
 			"*": {
-				"path": "./../../../vendor/{$id}",
+				"path": "vendor/{$id}",
 				"ignore": ["test", "tests", "doc", "docs", ".*"]
 			},
 			"frdl/array-helper": {
 				"url": "https://github.com/frdl/array-helper/archive/refs/heads/main.zip",
-				"path": "./../../../vendor/frdl/array-helper",
+				"path": "vendor/frdl/array-helper",
 				"ignore": [".*"]
 			},
 			"frdl/proxy": {
 				"url": "https://github.com/frdl/proxy/archive/refs/heads/master.zip",
-				"path": "./../../../vendor/frdl/proxy",
+				"path": "vendor/frdl/proxy",
 				"ignore": [".*"]
 			},
 			"vendor-patch/psecio.secure_dotenv": {
 				"url": "https://github.com/vendor-patch/secure_dotenv/archive/refs/heads/master.zip",
-				"path": "./../../../vendor/vendor-patch/psecio.secure_dotenv",
+				"path": vendor/vendor-patch/psecio.secure_dotenv",
 				"ignore": [".*"]
 			},
 			"inverisoss/tiny-php-queue": {
 				"url": "https://github.com/inverisOSS/tiny-php-queue/archive/refs/tags/1.0.0.zip",
-				"path": "./../../../vendor/inverisoss/tiny-php-queue",
+				"path": "vendor/inverisoss/tiny-php-queue",
 				"ignore": [".*"]
 			},
 			"nelexa/zip": {
 				"url": "https://github.com/Ne-Lexa/php-zip/archive/refs/tags/4.0.1.zip",
-				"path": "./../../../vendor/nelexa/zip",
+				"path": "vendor/nelexa/zip",
 				"ignore": [".*"]
 			},
 			"jenssegers/proxy": {
 				"url": "https://github.com/jenssegers/php-proxy/archive/refs/tags/v3.1.0.zip",
-				"path": "./../../../vendor/jenssegers/proxy",
+				"path": "vendor/jenssegers/proxy",
 				"ignore": [".*"]
 			},
 			"vendor-patch/enum-cl": {
 				"url": "https://github.com/vendor-patch/php-enum-cl/archive/refs/heads/main.zip",
-				"path": "./../../../vendor/vendor-patch/enum-cl",
+				"path": "vendor/vendor-patch/enum-cl",
 				"ignore": [".*"]
 			}
 		}
