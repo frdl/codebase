@@ -114,6 +114,7 @@
 	},
 	"minimum-stability": "dev",
 	"config": {
+		"platform-check": false,
 		"bin-dir": "./bin",
 		"preferred-install": "auto",
 		"cache-files-ttl": 3600,
