@@ -140,7 +140,6 @@
            "frdl/codebase-vendors" : "*"
 	},
 	"require": {
-		"php": ">=7.0|>=8.0",
 		"frdl/webfan": "*",
 		"composer/composer": "*",
 		"friendsofphp/proxy-manager-lts": "*",
